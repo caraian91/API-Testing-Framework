@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "41d41d25-753b-4d80-af49-eb8c7bc7e5d5",
+		"name": "Books API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25398081"
+	},
+	"item": [
+		{
+			"name": "Status",
+			"item": [
+				{
+					"name": "/status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/status",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "/books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/books?type=fiction",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "fiction"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/books/bookId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/books/6",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"books",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Clients",
+			"item": [
+				{
+					"name": "/api-clients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"clientName\": \"Cristi\",\r\n   \"clientEmail\": \"email_cristi23mailinator.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/api-clients/",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"api-clients",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "/orders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6366a704d4381ce96e5ae9d7a6281c61bf9b1e054f21651cb83c7d62bc980aa8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/all orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6366a704d4381ce96e5ae9d7a6281c61bf9b1e054f21651cb83c7d62bc980aa8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/an order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6366a704d4381ce96e5ae9d7a6281c61bf9b1e054f21651cb83c7d62bc980aa8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders/lLNx-LrnX5isS99HrE9VL",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								"lLNx-LrnX5isS99HrE9VL"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/update an order",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6366a704d4381ce96e5ae9d7a6281c61bf9b1e054f21651cb83c7d62bc980aa8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerName\": \"Alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders/lLNx-LrnX5isS99HrE9VL",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								"lLNx-LrnX5isS99HrE9VL"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete an order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6366a704d4381ce96e5ae9d7a6281c61bf9b1e054f21651cb83c7d62bc980aa8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://simple-books-api.glitch.me/orders/ALIjT9ZkfbEXfrsa8qy9m",
+							"protocol": "https",
+							"host": [
+								"simple-books-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								"ALIjT9ZkfbEXfrsa8qy9m"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
